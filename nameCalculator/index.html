@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Name Calculator</title>
+</head>
+
+<body ng-app="NameCalculator">
+    <h1>Name Calculator</h1>
+    <div ng-controller="myNameCalculatorController">
+        <input type="text" ng-model="name" ng-keyup="displayNumeric()" placeholder="Enter your name">
+        <div>The numeric value of name is: {{nameValue}}</div>
+    </div>
+
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
