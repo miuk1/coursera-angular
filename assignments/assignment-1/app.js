@@ -5,11 +5,12 @@
         .module('lunchChecker', [
 
         ])
-        .controller('lunchCheckerController', function ($scope) {
+        .controller('lunchCheckerController', function ($scope, $http) {
             var vm = $scope;
             vm.lunch = '';
             vm.lunches = [];
             vm.msg;
+            vm.fruits;
 
             vm.checkLunch = function () {
                 if (vm.lunch == '') {
