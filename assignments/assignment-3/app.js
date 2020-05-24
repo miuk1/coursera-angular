@@ -21,12 +21,10 @@
       controllerAs: 'menu',
       bindToController: true
     };
-
     return ddo;
   };
 
   NarrowItDownController.$inject = ['MenuSearchService'];
-
   function NarrowItDownController(MenuSearchService) {
     var menu = this;
     menu.shortName = '';
@@ -47,6 +45,10 @@
     menu.removeMenuItem = function (itemIndex) {
       menu.found.splice(itemIndex, 1);
     };
+
+    menu.searchItems = function (searchTerm) {
+      return menu.matchedMenuItems(searchTerm);
+    }
   };
 
   MenuSearchService.$inject = ['$http', 'API_URL'];
@@ -69,7 +71,6 @@
         return foodItems;
       });
     }
-  }
-
+  };
 
 })();
