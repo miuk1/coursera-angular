@@ -1,5 +1,13 @@
-<ul>
-  <li ng-repeat="item in $ctrl.items">
-    {{item.name}}
-  </li>
-</ul>
+
+<table style="width:100%">
+  <tr>
+    <th>Dish</th>
+    <th>Description</th> 
+    <th>Price ($)</th>
+  </tr>
+  <tr ng-repeat="item in $ctrl.items">
+    <td ng-bind="item.name"></td>
+    <td ng-bind="item.description"></td>
+    <td ng-bind="item.price_large"></td>
+  </tr>
+</table>
